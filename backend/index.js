@@ -36,7 +36,7 @@ app.get('/alltodos' , async(req,res) => {
          message : "All todos Shown"
        })
      }catch(err){
-       console.log('err -',err);
+       console.log('err is  -',err);
           return res.status(400).json({
              message : "Not working"
           });
