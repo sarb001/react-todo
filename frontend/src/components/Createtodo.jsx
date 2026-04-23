@@ -7,6 +7,21 @@ export function Createtodo(){
     const Todohander = () => {
         console.log('title -',Title);
         console.log('desc -',Description);
+
+            fetch('http://localhost:3000/todo',{
+                 method : "POST",
+                 headers : {
+                    'Content-Type' : 'application/json'
+                 },
+                 body : JSON.stringify({
+                    title : Title,
+                    description : Description
+                 })
+            })
+            .then(res => res.json())
+            .then(data => console.log('data',data))
+            .catch(err => console.log('err -',err))
+            console.log('data entered ');
     }
 
     return (
@@ -21,7 +36,7 @@ export function Createtodo(){
                value = {Description} 
                onChange={(e) => setDescription(e.target.value)}
              />
-             <div>
+             <div style = {{padding : '10px'}}>
                 <button onClick={Todohander}> Add Todo </button>
              </div>
         </>
