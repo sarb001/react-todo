@@ -1,11 +1,15 @@
 
 import './App.css'
+import { Createtodo } from './components/Createtodo';
 
 function App() {
 
   return (
     <> 
-        <div> Inside the React  App  </div>
+        <div> Todo Application  </div>
+        <div>
+          <Createtodo />
+        </div>
     </>
   )
 }
