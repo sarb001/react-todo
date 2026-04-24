@@ -5,8 +5,8 @@ export function Createtodo(){
     const [Description,setDescription] = useState('');
 
     const Todohander = () => {
-        console.log('title -',Title);
-        console.log('desc -',Description);
+        console.log('title is here  -',Title);
+        console.log('desc is her e -',Description);
 
             fetch('http://localhost:3000/todo',{
                  method : "POST",
