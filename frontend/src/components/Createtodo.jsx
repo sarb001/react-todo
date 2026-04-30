@@ -5,8 +5,8 @@ export function Createtodo(){
     const [Description,setDescription] = useState('');
 
     const Todohander = () => {
-        console.log('title is here  -',Title);
-        console.log('desc is her e -',Description);
+        console.log('title =  -',Title);
+        console.log('desc = -',Description);
 
             fetch('http://localhost:3000/todo',{
                  method : "POST",
@@ -31,7 +31,7 @@ export function Createtodo(){
                value = {Title} 
                onChange={(e) => setTitle(e.target.value)}
              />
-             <div> Description - </div>
+             <div> Description is here - </div>
              <input type = "text" placeholder="Enter Description..."  
                value = {Description} 
                onChange={(e) => setDescription(e.target.value)}
