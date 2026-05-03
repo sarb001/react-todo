@@ -1,6 +1,7 @@
 
 import './App.css'
-import { Createtodo } from './components/Createtodo';
+// import { Createtodo } from './components/Createtodo';
+import { Todocomponent } from './components/Todocomponent';
 
 function App() {
 
@@ -8,7 +9,8 @@ function App() {
     <> 
         <div> Todo Application  </div>
         <div>
-          <Createtodo />
+          {/* <Createtodo />  */}
+          <Todocomponent /> 
         </div>
     </>
   )
