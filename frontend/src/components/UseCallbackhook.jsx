@@ -1,19 +1,23 @@
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
+
+// when fn is used outside the  useEffect then to  prevent re-creation of  fn,
+// we use  useCallback hook 
+
+// It is used for  memoizing the  whole fn'
 
 
 export const UseCallbackHook = () => {
 
     const[query,setquery] = useState('');
 
-     const DatafromApi = () => {
+     const DatafromApi = useCallback(() => {
          console.log('typing--',query);
-     }
+     },[query])
 
     useEffect(() => {
          console.log('Effect runnig ')
        DatafromApi();
     },[DatafromApi])
-
 
 
     return (
