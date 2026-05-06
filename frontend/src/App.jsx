@@ -3,6 +3,7 @@ import './App.css'
 // import { Createtodo } from './components/Createtodo';
 import { Todocomponent } from './components/Todocomponent';
 import { UseCallbackHook } from './components/useCallbackhook';
+import { UseMemo } from './components/UseMemo';
 
 function App() {
 
@@ -11,10 +12,15 @@ function App() {
         <div> Todo Application  </div>
         <div>
           {/* <Createtodo />  */}
+
+          {/* ****** // React.Memo or memo */}
           {/* <Todocomponent />  */}
 
           {/* ******* // use callBackHook */}
-          <UseCallbackHook />
+          {/* <UseCallbackHook /> */}
+
+          {/* ******** //  useMemo */}
+          <UseMemo />
 
         </div>
     </>
